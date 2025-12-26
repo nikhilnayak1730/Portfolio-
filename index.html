@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vennela_Explore | Professional Brand Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@1,400;1,700;1,900&display=swap');
+        
+        :root {
+            --brand-emerald: #059669;
+            --brand-amber: #d97706;
+            --brand-gold: #fbbf24;
+            --zinc-950: #09090b;
+            --silver-text: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--zinc-950);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Silver Editorial Italic for Awareness and Odds */
+        .editorial-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--silver-text);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        /* Saral LT Style Regular for info sections */
+        .info-sans {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            color: #334155;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .hero-heading {
+            font-weight: 900;
+            letter-spacing: -0.06em;
+            line-height: 0.9;
+            font-size: clamp(3.5rem, 10vw, 9rem);
+        }
+
+        /* Vibrant Toggle Toggles */
+        .btn-toggle-emerald {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            box-shadow: 0 12px 24px -6px rgba(5, 150, 105, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-toggle-amber {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            box-shadow: 0 12px 24px -6px rgba(217, 119, 6, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-toggle-emerald:hover, .btn-toggle-amber:hover {
+            transform: scale(1.05) translateY(-4px);
+            filter: brightness(1.1);
+        }
+
+        /* Minimalist Slider */
+        .slider-viewport {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .slide {
+            min-width: 100%;
+            flex-shrink: 0;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-padding { padding: 10rem 1.5rem; }
+        
+        @media (max-width: 768px) {
+            .section-padding { padding: 6rem 1rem; }
+            .hero-heading { line-height: 1; }
+        }
+    </style>
+</head>
+<body class="selection:bg-emerald-100">
+
+    <!-- Global Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-3xl border-b border-zinc-100 py-6">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter uppercase">Vennela<span class="text-emerald-600">_Explore</span></div>
+            <div class="hidden md:flex items-center gap-12">
+                <a href="#about-her" class="text-xs font-black uppercase tracking-widest hover:text-emerald-600 transition">Biography</a>
+                <a href="#journey" class="text-xs font-black uppercase tracking-widest hover:text-emerald-600 transition">Timeline</a>
+                <a href="#praise" class="text-xs font-black uppercase tracking-widest hover:text-emerald-600 transition">Praise</a>
+                <a href="https://www.instagram.com/vennela_explore?igsh=NmE5MnFqOG85ZWJ0" target="_blank" class="flex items-center gap-3 px-8 py-3 bg-zinc-950 text-white rounded-full text-[10px] font-black tracking-widest hover:scale-105 transition shadow-xl">
+                    <i class="fab fa-instagram text-base"></i> CONNECT
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Composition -->
+    <header class="min-h-screen flex flex-col justify-center items-center pt-32 pb-16 px-6 text-center">
+        <div class="reveal-on-scroll">
+            <div class="inline-flex items-center gap-3 px-6 py-2 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-black uppercase tracking-[0.4em] mb-12 text-emerald-700">
+                <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_#10b981]"></span>
+                Target Expedition: Mount Everest
+            </div>
+            
+            <h1 class="hero-heading mb-16">
+                Defying <span class="editorial-italic">Odds.</span><br>
+                Leading <span class="editorial-italic">Awareness.</span>
+            </h1>
+
+            <p class="info-sans text-xl md:text-2xl max-w-3xl mx-auto mb-20 leading-relaxed">
+                A tribal odyssey defined by resilience, from the soil of Telangana to the highest summits. Spreading environmental safety and women's empowerment through a digital-first movement.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-8 justify-center">
+                <a href="#journey" class="btn-toggle-emerald px-12 py-6 text-white rounded-2xl font-black text-sm uppercase tracking-widest">Chronicle of Impact</a>
+                <a href="#about-her" class="btn-toggle-amber px-12 py-6 text-white rounded-2xl font-black text-sm uppercase tracking-widest">The Narrative</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Her: Narrating the Explorer -->
+    <section id="about-her" class="section-padding bg-zinc-50 border-y border-zinc-100">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+            <div class="reveal-on-scroll">
+                <h3 class="text-xs font-black uppercase tracking-widest text-amber-600 mb-6">The Biography</h3>
+                <h2 class="text-5xl font-black tracking-tighter mb-10 leading-none">A Story Written in <span class="text-amber-600 italic">Courage.</span></h2>
+                <div class="space-y-8 info-sans">
+                    <p>
+                        Growing up in Somavaram Peta, Kamareddy, Vennela faced a pivotal moment after her 10th standard. Without her father’s guidance for education, she chose to carve a path inspired by the sheer grit of athletes and the power of cinema.
+                    </p>
+                    <p>
+                        Inspired by the rock-climbing sequences of <i>Bahubali</i> and sharing a birth date with actor Prabhas, she embraced the call of the mountains. Today, she is a certified A-Grade mountaineer representing the tribal spirit of Telangana, proving that identity is forged in action, not just heritage.
+                    </p>
+                    <p>
+                        Her mission transcends physical climbing; it is a quest to revitalize the earth’s soil and protect its people through helmet safety advocacy.
+                    </p>
+                </div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 0.2s;">
+                <div class="relative p-12 bg-white rounded-[3rem] shadow-2xl border border-zinc-100">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-amber-50 rounded-full -z-10 animate-blob"></div>
+                    <h3 class="text-2xl font-black mb-8 flex items-center gap-4">
+                        <i class="fab fa-instagram text-amber-500 text-4xl"></i> Digital Impact
+                    </h3>
+                    <p class="info-sans mb-10 text-base">
+                        Collaborating with top-tier <strong>Content Creators</strong> on Instagram, Vennela has built a digital community to amplify her core missions:
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold text-xs mt-1">1</div>
+                            <span class="info-sans text-base"><strong>Helmet Safety:</strong> Leveraging influencer networks to normalize protective gear in rural and urban youth.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 font-bold text-xs mt-1">2</div>
+                            <span class="info-sans text-base"><strong>Women Empowerment:</strong> Collaborative storytelling on Instagram to show girls that financial barriers are just hills, not mountains.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Timeline with Vibrant Toggles -->
+    <section id="journey" class="section-padding bg-white overflow-hidden">
+        <div class="max-w-5xl mx-auto relative">
+            <div class="timeline-connector"></div>
+            
+            <div class="text-center mb-32 reveal-on-scroll">
+                <h2 class="text-6xl font-black tracking-tighter mb-6">Chronicle of <span class="text-emerald-600">Impact</span></h2>
+                <p class="info-sans font-bold uppercase text-xs tracking-[0.3em] text-zinc-400">Verified Expeditions 2022–2024</p>
+            </div>
+
+            <!-- Milestone 1 -->
+            <div class="mb-40 relative reveal-on-scroll">
+                <div class="flex flex-col md:flex-row items-center gap-20 text-center md:text-left">
+                    <div class="md:w-1/2 flex justify-center md:justify-end">
+                        <div class="w-24 h-24 btn-toggle-emerald text-white rounded-full flex items-center justify-center font-black text-sm z-10">2022</div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h4 class="text-3xl font-black mb-6">The Save Soil Yatra</h4>
+                        <p class="info-sans text-lg">A 5,000 KM awareness bicycle journey across Telangana and Andhra. Recognized by NTR District Collector for grassroots environmental leadership.</p>
+                        <a href="https://www.sakshi.com/telugu-news/family/save-soil-banothu-vennela-takes-aim-student-started-her-cycle-yatra-1457631" target="_blank" class="text-emerald-600 text-xs font-black mt-8 inline-block hover:underline tracking-widest">SAKSHI ARCHIVE →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="mb-40 relative reveal-on-scroll">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-20 text-center md:text-right">
+                    <div class="md:w-1/2 flex justify-center md:justify-start">
+                        <div class="w-24 h-24 btn-toggle-amber text-white rounded-full flex items-center justify-center font-black text-sm z-10">2023</div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h4 class="text-3xl font-black mb-6">Kilimanjaro Summit</h4>
+                        <p class="info-sans text-lg">Successful ascent of Mt. Kilimanjaro (5,895M) on Republic Day. Supported by Green India Challenge with 3 Lakh financial aid.</p>
+                        <a href="https://www.thehindu.com/news/national/telangana/tribal-student-from-telangana-conquers-mount-kilimanjaro-in-tanzania/article66442730.ece" target="_blank" class="text-amber-600 text-xs font-black mt-8 inline-block hover:underline tracking-widest">THE HINDU ARCHIVE →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="mb-20 relative reveal-on-scroll">
+                <div class="flex flex-col md:flex-row items-center gap-20 text-center md:text-left">
+                    <div class="md:w-1/2 flex justify-center md:justify-end">
+                        <div class="w-24 h-24 btn-toggle-emerald text-white rounded-full flex items-center justify-center font-black text-sm z-10">2024</div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h4 class="text-3xl font-black mb-6">K2K Expedition</h4>
+                        <p class="info-sans text-lg">Crossed Zojila Pass during the Kargil-to-Kanyakumari mission. Supported by GCD Foundation & JD Lakshmi Narayana.</p>
+                        <a href="https://www.timesnownews.com/good-news/kargil-se-kanniyakumari-kargil-vijay-diwas-celebration-turns-into-fitness-challenge-article-105965125" target="_blank" class="text-emerald-600 text-xs font-black mt-8 inline-block hover:underline tracking-widest">TIMES NOW ARCHIVE →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials: Minimalistic Words of Impact -->
+    <section id="praise" class="section-padding bg-zinc-950 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h3 class="text-xs font-black uppercase tracking-[0.5em] text-emerald-500 mb-6">Words from Personalities</h3>
+                <h2 class="text-5xl font-black tracking-tighter">Official <span class="editorial-italic">Validation.</span></h2>
+            </div>
+
+            <div class="slider-viewport border border-white/5" id="sliderContainer">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- Slide 1: Collector -->
+                    <div class="slide bg-zinc-900/40">
+                        <blockquote class="text-3xl md:text-4xl font-bold leading-tight mb-12 max-w-4xl mx-auto italic opacity-90">
+                            "It is heartening to see youth like Vennela taking charge of environmental awareness at such a grassroots level. Her yatra is an inspiration."
+                        </blockquote>
+                        <div class="flex flex-col items-center">
+                            <cite class="not-italic font-black text-lg text-white">Dilli Rao</cite>
+                            <span class="text-zinc-500 text-[10px] font-black uppercase tracking-widest">NTR District Collector</span>
+                        </div>
+                    </div>
+                    <!-- Slide 2: MP -->
+                    <div class="slide bg-zinc-900/40">
+                        <blockquote class="text-3xl md:text-4xl font-bold leading-tight mb-12 max-w-4xl mx-auto italic opacity-90">
+                            "Banoth Vennela's ambition to climb Everest is a testament to the potential of our tribal youth. We are proud to support her journey."
+                        </blockquote>
+                        <div class="flex flex-col items-center">
+                            <cite class="not-italic font-black text-lg text-white">J. Santosh Kumar</cite>
+                            <span class="text-zinc-500 text-[10px] font-black uppercase tracking-widest">RS MP & Green India Challenge</span>
+                        </div>
+                    </div>
+                    <!-- Slide 3: JD Lakshmi Narayana -->
+                    <div class="slide bg-zinc-900/40">
+                        <blockquote class="text-3xl md:text-4xl font-bold leading-tight mb-12 max-w-4xl mx-auto italic opacity-90">
+                            "Vennela represents the unstoppable spirit of modern India. Her journey from the soil to the peaks is a roadmap for every young dreamer."
+                        </blockquote>
+                        <div class="flex flex-col items-center">
+                            <cite class="not-italic font-black text-lg text-white">JD Lakshmi Narayana</cite>
+                            <span class="text-zinc-500 text-[10px] font-black uppercase tracking-widest">GCD Foundation Advisor</span>
+                        </div>
+                    </div>
+                    <!-- Slide 4: HCG Founder -->
+                    <div class="slide bg-zinc-900/40">
+                        <blockquote class="text-3xl md:text-4xl font-bold leading-tight mb-12 max-w-4xl mx-auto italic opacity-90">
+                            "Her performance on Zojila Pass was inspiring; her endurance as a young cyclist sets new standards for the entire team."
+                        </blockquote>
+                        <div class="flex flex-col items-center">
+                            <cite class="not-italic font-black text-lg text-white">Ravinder Nandanoori</cite>
+                            <span class="text-zinc-500 text-[10px] font-black uppercase tracking-widest">Founder, Hyderabad Cyclist Group</span>
+                        </div>
+                    </div>
+                    <!-- Slide 5: The Hindu -->
+                    <div class="slide bg-zinc-900/40">
+                        <blockquote class="text-3xl md:text-4xl font-bold leading-tight mb-12 max-w-4xl mx-auto italic opacity-90">
+                            "A tribal student from Telangana has made history by conquering Mount Kilimanjaro, proving that dreams have no boundaries."
+                        </blockquote>
+                        <div class="flex flex-col items-center">
+                            <cite class="not-italic font-black text-lg text-white">The Hindu</cite>
+                            <span class="text-zinc-500 text-[10px] font-black uppercase tracking-widest">National Editorial</span>
+                        </div>
+                    </div>
+                    <!-- Slide 6: News18 / ETV -->
+                    <div class="slide bg-zinc-900/40">
+                        <blockquote class="text-3xl md:text-4xl font-bold leading-tight mb-12 max-w-4xl mx-auto italic opacity-90">
+                            "A beacon of hope for environmental advocacy. Vennela's grit brings fame to the tribal community and the state."
+                        </blockquote>
+                        <div class="flex flex-col items-center">
+                            <cite class="not-italic font-black text-lg text-white">Regional Media Focus</cite>
+                            <span class="text-zinc-500 text-[10px] font-black uppercase tracking-widest">Broadcast Feature</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-white/5">
+                    <div class="h-full bg-emerald-500 transition-all duration-[10000ms] ease-linear" id="progressBar" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="flex justify-center gap-10 mt-16">
+                <button onclick="prevSlide()" class="w-16 h-16 rounded-full border border-white/10 hover:bg-white/5 flex items-center justify-center transition shadow-2xl">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button onclick="nextSlide()" class="w-16 h-16 rounded-full border border-white/10 hover:bg-white/5 flex items-center justify-center transition shadow-2xl">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-32 bg-white px-8 border-t border-zinc-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16">
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-black tracking-tighter uppercase mb-2">Vennela<span class="text-emerald-600">_Explore</span></h2>
+                <p class="text-zinc-400 font-black text-[10px] tracking-[0.5em] uppercase">The Mountaineer's Narrative</p>
+            </div>
+            
+            <a href="https://www.instagram.com/vennela_explore?igsh=NmE5MnFqOG85ZWJ0" target="_blank" class="w-24 h-24 bg-zinc-950 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition">
+                <i class="fab fa-instagram text-4xl"></i>
+            </a>
+
+            <div class="text-[10px] font-black text-zinc-300 uppercase tracking-widest text-center md:text-right">
+                CITATIONS: THE HINDU | TIMES NOW | SAKSHI | TELANGANA TODAY
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Professional Automatic Slider
+        let currentSlide = 0;
+        const track = document.getElementById('sliderTrack');
+        const bar = document.getElementById('progressBar');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let slideInterval;
+
+        function updateSlider() {
+            track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+            resetProgressBar();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function resetProgressBar() {
+            bar.style.transition = 'none';
+            bar.style.width = '0%';
+            setTimeout(() => {
+                bar.style.transition = 'width 10000ms linear';
+                bar.style.width = '100%';
+            }, 50);
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 10000);
+            resetProgressBar();
+        }
+
+        startAutoSlide();
+
+        const container = document.getElementById('sliderContainer');
+        container.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        container.addEventListener('mouseleave', startAutoSlide);
+
+        // Scroll Animations
+        const reveals = document.querySelectorAll('.reveal-on-scroll');
+        function handleScroll() {
+            reveals.forEach(r => {
+                const rect = r.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.85) {
+                    r.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', handleScroll);
+        window.onload = handleScroll;
+    </script>
+</body>
+</html>
